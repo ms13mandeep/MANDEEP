@@ -18,7 +18,7 @@ import java.util.Scanner;
  */
 public class CardTrick {
     public static void printInfo(){
-        
+        System.out.println("Mandeep Singh 991655280");
     }
     public static void main(String[] args) {
         Card[] magicHand = new Card[7];
