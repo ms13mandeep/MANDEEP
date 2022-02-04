@@ -17,17 +17,8 @@ import java.util.Scanner;
  * @date January 29, 2022
  */
 public class CardTrick {
-    public static void printInfo(Card[] magicHand, Card userCard){
-        for (int i = 0; i < magicHand.length; i++) {
-            if(((magicHand[i].getSuit()).equals(userCard.getSuit()))&&((magicHand[i].getValue())==(userCard.getValue()))){
-                System.out.println("Congrats! You Won! Your card was in the Magic Hand");
-                break;
-            }
-            else if(i==(magicHand.length-1)){
-                System.out.println("You lost, Try again!");
-      
-            }
-        }
+    public static void printInfo(){
+        
     }
     public static void main(String[] args) {
         Card[] magicHand = new Card[7];
@@ -59,7 +50,18 @@ public class CardTrick {
         }
         userCard.setSuit(userSuit);
         userCard.setValue(userCNum);
-        printInfo(magicHand, userCard);
+        
+        for (int i = 0; i < magicHand.length; i++) {
+            if(((magicHand[i].getSuit()).equals(userCard.getSuit()))&&((magicHand[i].getValue())==(userCard.getValue()))){
+                System.out.println("Congrats! You Won! Your card was in the Magic Hand");
+                printInfo();
+                break;
+            }
+            else if(i==(magicHand.length-1)){
+                System.out.println("You lost, Try again!");
+      
+            }
+        }
     }
 
 }
